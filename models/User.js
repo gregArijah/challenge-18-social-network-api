@@ -30,6 +30,7 @@ const userSchema = new Schema(  //define user model in the following schema
       virtuals: true,
     },
     id: false,
+    versionKey:false
   }
 );
 

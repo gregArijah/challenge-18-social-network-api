@@ -26,7 +26,8 @@ const thoughtSchema = new Schema(  //define user model in the following schema
     toJSON: {
         virtuals: true
     },
-    id:false
+    id:false,
+    versionKey:false
   } 
 );
 
