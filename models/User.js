@@ -20,7 +20,7 @@ const userSchema = new Schema(  //define user model in the following schema
       ref: "Thought"
     }],
     friends: [{    //array of id values self-referencing the user model
-      type: Schema.Type.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: "User"
     }],
   },

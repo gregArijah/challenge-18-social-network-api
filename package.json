@@ -1,15 +1,15 @@
 {
     "name": "challenge-18-social-network-api",
     "version": "1.0.0",
-    "main": "index.js",
+    "main": "server.js",
     "license": "MIT",
     "dependencies": {
-      "express": "^4.17.1",
-      "mongoose": "^6.0.13"
+        "express": "^4.17.1",
+        "moment": "^2.14.0",
+        "mongoose": "^6.0.13"
     },
     "scripts": {
-      "start": "node server.js",
-      "seed": "node utils/seed.js"
+        "start": "node server.js",
+        "seed": "node utils/seed.js"
     }
-  }
-  
+}
