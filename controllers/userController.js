@@ -6,8 +6,9 @@ const { User,Thought } = require('../models');module.exports = {
   },
   getSingleUser(req, res) {     //get single user
     User.findOne({ _id: req.params.userId })
-      .populate('thoughts')
-      .populate('friends')
+      //.populate([{path: 'thoughts'},{path: 'friends'}])
+      //.populate('thoughts')
+      //.populate('friends')
       .then((user) =>
         !user
           ? res.status(404).json({ message: 'No user with that ID' })
@@ -24,7 +25,7 @@ const { User,Thought } = require('../models');module.exports = {
     User.findOneAndUpdate(
         { _id: req.params.userId },
         { $set: req.body },
-        { runValidators: true, new: true }
+        { new: true }
     )
     .then((user) =>
       !user
