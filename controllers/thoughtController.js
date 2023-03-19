@@ -3,7 +3,7 @@ const { Thought, User } = require('../models');
 module.exports = {
     getAllThoughts(req, res) {
         Thought.find({})
-          .then((thought) => console.log(thought))//res.json(thought))
+          .then((thought) => res.json(thought))   //console.log(thought)//consolelog returns an object array but res.json returns an empty object
           .catch((err) => res.status(500).json(err));
     },
     getSingleThought(req, res) {
@@ -21,7 +21,7 @@ module.exports = {
             return User.findOneAndUpdate(
                 {_id: req.body.userId},
                 { $push: {thoughts: _id} },
-                { new: true }
+                { runValidators: true, new: true }
             );
           })
           .then((thought) => 
@@ -52,7 +52,7 @@ module.exports = {
             : User.findOneAndUpdate(
                 { thoughts: req.params.thoughtId },
                 { $pull: { thoughts: req.params.thoughtId }},
-                { new: true }
+                { runValidators: true, new: true }
             )
           )
           .then((user) => 
