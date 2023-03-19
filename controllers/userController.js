@@ -6,6 +6,8 @@ const { User,Thought } = require('../models');module.exports = {
   },
   getSingleUser(req, res) {     //get single user
     User.findOne({ _id: req.params.userId })
+      .populate('thoughts')
+      .populate('friends')
       .then((user) =>
         !user
           ? res.status(404).json({ message: 'No user with that ID' })
