@@ -6,7 +6,6 @@ module.exports = {
           .then((thought) => res.json(thought))
           .catch((err) => res.status(500).json(err));
     },
-
     getSingleThought(req, res) {
         Thought.findOne({ _id: req.params.thoughtId })
           .then((thought) =>
@@ -16,7 +15,6 @@ module.exports = {
           )
           .catch((err) => res.status(500).json(err));
     },
-
     createThought(req, res) {
         Thought.create(req.body)
           .then(({ _id }) => {
@@ -64,7 +62,6 @@ module.exports = {
           )
           .catch((err) => res.status(500).json(err));
     },
-
     createReaction(req, res) {
         Thought.findOneAndUpdate(
             { _id: req.params.thoughtId },
@@ -78,7 +75,6 @@ module.exports = {
           )
           .catch((err) => res.status(500).json(err)); 
     },
-
     deleteReaction(req, res) {
         Thought.findOneAndUpdate(
             { _id: req.params.thoughtId },
