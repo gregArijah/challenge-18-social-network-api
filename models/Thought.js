@@ -34,7 +34,7 @@ const thoughtSchema = new Schema(  //define user model in the following schema
 
 // Create a virtual property `reactionCount` that gets the amount of reactions per post
 thoughtSchema.virtual('reactionCount').get(function () {
-    return this.reaction.length;
+    return this.reactions.length;
   });
   
   // Initialize our Post model
