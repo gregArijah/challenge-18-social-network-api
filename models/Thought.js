@@ -3,7 +3,7 @@ const moment = require('moment');
 const reactionSchema = require('./Reaction'); 
 
 // Schema to create User model  
-const thoughtSchema = new Schema(  //define user model in the following schema
+const thoughtSchema = new Schema(  //define user schema 
   {
     thoughtText: {   //string,required,must be between 1 and 280 characters
       type: String, 

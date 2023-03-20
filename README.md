@@ -12,6 +12,7 @@ This application is an API for a social network web application where users can 
 - [License](#license)
 - [Badges](#badges)
 - [Tests](#tests)
+- [SourceCode](#sourcecode)
 - [Questions](#questions)
 
 
@@ -38,6 +39,13 @@ This project is licensed under the terms of the [MIT License](https://choosealic
 ## Tests
 
 No tests have been included for this application.
+
+## SourceCode
+
+This code utilizes a regex for email validation which was copied from challenge 17.
+```
+[/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/]
+```
 
 ## Questions
 
