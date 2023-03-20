@@ -17,15 +17,15 @@ This application is an API for a social network web application where users can 
 
 ## Installation
 
-To run this application:  After downloading or cloning the repository and navigating to the correct folder using the command line, type "npm i" to install dependencies then type  "node index.js"  to run application.
+To run this application:  After downloading or cloning the repository and navigating to the correct folder using the command line, type "npm i" to install dependencies then type  "npm start"  to run application.
 
 ## Walkthrough
 
-[Click here to follow link to video walkthrough of application showing all functionality.](https://drive.google.com/file/d/1O5bkMyDxcedYVh68AweOTNSoN9TJyCBz/view)
+[Click here to follow link to video walkthrough of application showing all functionality.](https://drive.google.com/file/d/1RoycjaPsk8E1S74Ppugd6MisYlxK5ODc/view)
 ## Usage
 
 To run app navigate to folder in terminal, type 'npm i' to install dependecies and 'npm start' to run the app.
-Open an API client liek Insomnia and carry out the tasks in the challenge statement.
+Open an API client like Insomnia and carry out the tasks in the challenge statement.
 
 ## License
 
